@@ -18,6 +18,15 @@ module.exports = {
   plugins: ['react-hooks'],
   rules: {
     'import/order': 'off',
+    '@typescript-eslint/no-unused-vars': [
+      'error',
+      {
+        argsIgnorePattern: '^_+',
+        ignoreRestSiblings: true,
+        varsIgnorePattern: '^_+',
+        args: 'none',
+      },
+    ],
   },
   env: {
     node: true,
